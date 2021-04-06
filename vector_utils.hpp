@@ -12,6 +12,7 @@ public:
     ~VectorUtils();
 
     double DotProduct(Vector3D & first, Vector3D & second);
+    Vector3D CrossProduct(Vector3D & first, Vector3D & second);
 
 private:
 

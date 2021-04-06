@@ -3,5 +3,5 @@ NAME = myProgram
 
 all: main
 
-main: main3D.cpp Vector3D.cpp
-	g++ main3D.cpp Vector3D.cpp -o $(NAME)
+main: main3D.cpp Vector3D.cpp vector_utils.cpp
+	g++ main3D.cpp Vector3D.cpp vector_utils.cpp -o $(NAME)

@@ -8,6 +8,14 @@ Vector3D::Vector3D()
     coordinates_.push_back(0);
 }
 
+Vector3D::Vector3D(double x, double y, double z)
+{
+    // initialize the vector with three coordinates [x,y,z]
+    coordinates_.push_back(x);
+    coordinates_.push_back(y);
+    coordinates_.push_back(z);
+}
+
 Vector3D::~Vector3D()
 {
 

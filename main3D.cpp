@@ -1,24 +1,24 @@
 #include "Vector3D.hpp"
+#include "vector_utils.hpp"
 #include <iostream>
 #include <vector>
 
 int main ()
 {
-    Vector3D myVector;
+    // two ways to create the vector
+    Vector3D myVector1;
+    Vector3D myVector2(1.0,2.0,3.0);
+
+    VectorUtils myUtils;
     
-    // print initial coordinates [0,0,0]
-    myVector.printCoordinates();
-
-    std::cout << "I change coordinates to [x: 4, y: 9, z: 10]" << std::endl;
-
     // update coordinates
-    myVector.setCoordinates(4.0,9.0,10.0);
+    myVector1.setCoordinates(4.0,9.0,10.0);
 
     // print current coordinates
-    myVector.printCoordinates();  
+    myVector1.printCoordinates();  
 
-    // print only x component
-    std::cout << "The x component is: " << myVector.getx() << std::endl;
+    // compute dot scalar
+    std::cout << "dot product: " << myUtils.DotProduct(myVector1, myVector2) << std::endl;
 
     return 0;
 

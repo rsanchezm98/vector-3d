@@ -11,6 +11,8 @@ public:
     VectorUtils();
     ~VectorUtils();
 
+    double DotProduct(Vector3D & first, Vector3D & second);
+
 private:
 
 };

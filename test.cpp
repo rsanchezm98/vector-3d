@@ -13,14 +13,14 @@ double squareRoot(const double a) {
     }
 }
 
-TEST(PRUEBA, PRUEBA1)
+TEST(Prueba1, a)
 {
     EXPECT_EQ(6, squareRoot(36.0));
     EXPECT_EQ(18.0, squareRoot(324.0));
     EXPECT_EQ(25.4, squareRoot(645.16));
     EXPECT_EQ(0, squareRoot(0.0));
 }
-
+/*
 TEST(DotProductTest, allTests) { 
     Vector3D myVector1(1.0,2.0,3.0);
     Vector3D myVector2(1.0,2.0,3.0);
@@ -29,6 +29,7 @@ TEST(DotProductTest, allTests) {
     myVector2.setCoordinates(1.0,2.0,0.0);
     EXPECT_EQ(5, vector_utils::DotProduct(myVector1, myVector2));
 }
+*/
 
 int main (int argc, char* argv[])
 {

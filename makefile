@@ -8,4 +8,4 @@ main: main3D.cpp Vector3D.cpp vector_utils.cpp
 	g++ main3D.cpp Vector3D.cpp vector_utils.cpp -o $(NAME_MAIN)
 
 test: test.cpp Vector3D.cpp vector_utils.cpp
-	g++ test.cpp Vector3D.cpp vector_utils.cpp -o $(NAME_TEST)
+	g++ test.cpp Vector3D.cpp vector_utils.cpp -lgtest -pthread -o $(NAME_TEST) 

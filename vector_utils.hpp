@@ -5,17 +5,13 @@
 #include <iostream>
 #include "Vector3D.hpp"
 
-class VectorUtils
+namespace vector_utils
 {
-public:
-    VectorUtils();
-    ~VectorUtils();
 
     double DotProduct(Vector3D & first, Vector3D & second);
     Vector3D CrossProduct(Vector3D & first, Vector3D & second);
 
-private:
+} // namespace vector_utils
 
-};
 
 #endif // VECTOR_UTILS_HPP

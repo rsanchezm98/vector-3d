@@ -25,39 +25,48 @@ TEST(DotTestCase, TestDotInt)
 
 TEST(DotTestCase, TestDotDouble)
 {
-    Vector3D first(0,0,0);
-    Vector3D second(1,1,1);
-    EXPECT_EQ(0, vector_utils::DotProduct(first,second));
+    Vector3D first(0.0,0.0,0);
+    Vector3D second(1.0,1.0,1.0);
+    EXPECT_EQ(0.0, vector_utils::DotProduct(first,second));
     
-    first.setCoordinates(1,2,3);
-    second.setCoordinates(-1,2,-3);
-    EXPECT_EQ(-6, vector_utils::DotProduct(first,second));
+    first.setCoordinates(1.0,2.0,3.0);
+    second.setCoordinates(-1.0,2.0,-3.0);
+    EXPECT_EQ(-6.0, vector_utils::DotProduct(first,second));
 
-    first.setCoordinates(0,100,-100);
-    second.setCoordinates(-1,90,3);
-    EXPECT_EQ(8700, vector_utils::DotProduct(first,second));
+    first.setCoordinates(0.0,100.0,-100.0);
+    second.setCoordinates(-1.0,90.0,3.0);
+    EXPECT_EQ(8700.0, vector_utils::DotProduct(first,second));
 
-    first.setCoordinates(-1,-2,-3);
-    second.setCoordinates(-1,-2,-3);
-    EXPECT_EQ(14, vector_utils::DotProduct(first,second));
+    first.setCoordinates(-1.0,-2.0,-3.0);
+    second.setCoordinates(-1.0,-2.0,-3.0);
+    EXPECT_EQ(14.0, vector_utils::DotProduct(first,second));
 
 }
 
 TEST(CrossTestCase, TestCross)
 {
-    EXPECT_EQ(6, 6);
-}
 
-/*
-TEST(DotProductTest, allTests) { 
-    Vector3D myVector1(1.0,2.0,3.0);
-    Vector3D myVector2(1.0,2.0,3.0);
-    EXPECT_EQ(14, vector_utils::DotProduct(myVector1, myVector2));
-    myVector1.setCoordinates(1.0,2.0,0.0);
-    myVector2.setCoordinates(1.0,2.0,0.0);
-    EXPECT_EQ(5, vector_utils::DotProduct(myVector1, myVector2));
+    Vector3D first(0.0,0.0,0);
+    Vector3D second(1.0,1.0,1.0);
+    Vector3D solution(0.0, 0.0, 0.0);
+    EXPECT_EQ(solution.getCoordinates(), vector_utils::CrossProduct(first,second).getCoordinates());
+    
+    first.setCoordinates(1.0,2.0,3.0);
+    second.setCoordinates(-1.0,2.0,-3.0);
+    solution.setCoordinates(-12.0, 0.0, 4.0);
+    EXPECT_EQ(solution.getCoordinates(), vector_utils::CrossProduct(first,second).getCoordinates());
+
+    first.setCoordinates(0.0,100.0,-100.0);
+    second.setCoordinates(-1.0,90.0,3.0);
+    solution.setCoordinates(9300.0, 100.0, 100.0);
+    EXPECT_EQ(solution.getCoordinates(), vector_utils::CrossProduct(first,second).getCoordinates());
+
+    first.setCoordinates(-1.0,-2.0,-3.0);
+    second.setCoordinates(-1.0,-2.0,-3.0);
+    solution.setCoordinates(0.0, 0.0, 0.0);
+    EXPECT_EQ(solution.getCoordinates(), vector_utils::CrossProduct(first,second).getCoordinates());
+
 }
-*/
 
 int main (int argc, char* argv[])
 {

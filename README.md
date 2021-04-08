@@ -7,9 +7,16 @@ There is also implemented a template library that makes operations with the Vect
 ## Build
 ```
 mkdir build
-cd build
+cd build/
 cmake ..
 make
+```
+
+## Run
+```
+cd build/
+./myProgram
+./myTest
 ```
 
 ## GTEST verification

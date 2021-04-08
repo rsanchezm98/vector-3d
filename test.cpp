@@ -3,10 +3,49 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-TEST(Prueba1, a)
+TEST(DotTestCase, TestDotInt)
 {
-    EXPECT_EQ(6, 2*3);
+    Vector3D first(0,0,0);
+    Vector3D second(1,1,1);
+    EXPECT_EQ(0, vector_utils::DotProduct(first,second));
+    
+    first.setCoordinates(1,2,3);
+    second.setCoordinates(-1,2,-3);
+    EXPECT_EQ(-6, vector_utils::DotProduct(first,second));
 
+    first.setCoordinates(0,100,-100);
+    second.setCoordinates(-1,90,3);
+    EXPECT_EQ(8700, vector_utils::DotProduct(first,second));
+
+    first.setCoordinates(-1,-2,-3);
+    second.setCoordinates(-1,-2,-3);
+    EXPECT_EQ(14, vector_utils::DotProduct(first,second));
+
+}
+
+TEST(DotTestCase, TestDotDouble)
+{
+    Vector3D first(0,0,0);
+    Vector3D second(1,1,1);
+    EXPECT_EQ(0, vector_utils::DotProduct(first,second));
+    
+    first.setCoordinates(1,2,3);
+    second.setCoordinates(-1,2,-3);
+    EXPECT_EQ(-6, vector_utils::DotProduct(first,second));
+
+    first.setCoordinates(0,100,-100);
+    second.setCoordinates(-1,90,3);
+    EXPECT_EQ(8700, vector_utils::DotProduct(first,second));
+
+    first.setCoordinates(-1,-2,-3);
+    second.setCoordinates(-1,-2,-3);
+    EXPECT_EQ(14, vector_utils::DotProduct(first,second));
+
+}
+
+TEST(CrossTestCase, TestCross)
+{
+    EXPECT_EQ(6, 6);
 }
 
 /*

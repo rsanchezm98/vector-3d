@@ -8,7 +8,7 @@ A template library that makes operations with the Vector3D class. They are under
 To check the vector_utils.hpp functions between Vector3D vectors, there is implemented a test.cpp which uses google test to check its validity.
 
 ## Previous requirements
-You need to have correctly installed gtest [Google Test GitHub](https://github.com/google/googletest) in order to use it. You must build the test program as done in the makefile provided. 
+You need to have correctly installed gtest [Google Test GitHub](https://github.com/google/googletest) in order to use it.
 
 ## Build the programs 
 ```
